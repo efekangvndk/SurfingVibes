@@ -1,0 +1,6 @@
+framework module Pods_SocialMediaFirebase {
+  umbrella header "Pods-SocialMediaFirebase-umbrella.h"
+
+  export *
+  module * { export * }
+}
