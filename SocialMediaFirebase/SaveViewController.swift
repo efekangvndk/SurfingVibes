@@ -32,9 +32,40 @@ class SaveViewController: UIViewController {
     
     @IBAction func saveButton(_ sender: Any) {
         
-        let storage = Storage.storage()
-        let storageRef = storage.reference()
-        let infoFolder = storageRef.child("personal info")
+        // Metin alanlarından veriyi güvenli bir şekilde alın
+        if let passwordAgainText = savePasswordAgainText?.text,
+           let passwordText = savePasswordText?.text,
+           let nameText = saveNameText?.text,
+           let emailText = saveEmailText?.text,
+           let nickText = saveNickText?.text,
+           let phoneText = savePhoneText?.text {
+
+            // Verileri tek bir metin olarak birleştirin (örneğin, bir satırda).
+            let combinedText = """
+                Password Again: \(passwordAgainText)
+                Password: \(passwordText)
+                Name: \(nameText)
+                Email: \(emailText)
+                Nickname: \(nickText)
+                Phone: \(phoneText)
+                """
+
+            // Firebase Storage'a kaydedin (combinedText'i kullanarak yukarıdaki örnek kodu kullanabilirsiniz).
+            let storage = Storage.storage()
+            let textData = combinedText.data(using: .utf8) ?? Data() // Data türünü unwrap edin veya varsayılan bir değer kullanın
+            let textRef = storage.reference().child("kullanici_metin.txt")
+            
+            textRef.putData(textData, metadata: nil) { (metadata, error) in
+                if let error = error {
+                    print("Hata: \(error.localizedDescription)")
+                } else {
+                    print("Yükleme başarılı!")
+                }
+            }
+        } else {
+            // Eğer bir veya daha fazla metin alanı boşsa, uygun hata işlemlerini burada yapabilirsiniz.
+            print("Bir veya daha fazla metin alanı boş.")
+        }
         
         if saveEmailText.text != "" && saveNameText.text != "" && savePasswordText.text != "" && saveNickText.text != "" {
             Auth.auth().createUser(withEmail: saveEmailText.text! , password: savePasswordText.text!) { authdata, error in
