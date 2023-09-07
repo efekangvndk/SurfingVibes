@@ -31,6 +31,11 @@ class SaveViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let infoFolder = storageRef.child("personal info")
+        
         if saveEmailText.text != "" && saveNameText.text != "" && savePasswordText.text != "" && saveNickText.text != "" {
             Auth.auth().createUser(withEmail: saveEmailText.text! , password: savePasswordText.text!) { authdata, error in
                 if error != nil {
