@@ -32,7 +32,7 @@ class SaveViewController: UIViewController {
     
     @IBAction func saveButton(_ sender: Any) {
         
-        // Metin alanlarından veriyi güvenli bir şekilde alın
+        // Metin alanlarından veriyi güvenli bir şekilde alalım.
         if let passwordAgainText = savePasswordAgainText?.text,
            let passwordText = savePasswordText?.text,
            let nameText = saveNameText?.text,
@@ -40,7 +40,7 @@ class SaveViewController: UIViewController {
            let nickText = saveNickText?.text,
            let phoneText = savePhoneText?.text {
 
-            // Verileri tek bir metin olarak birleştirin (örneğin, bir satırda).
+            // Verileri tek bir metin olarak birleştirme işlemi (örneğin, bir satırda).
             let combinedText = """
                 Password Again: \(passwordAgainText)
                 Password: \(passwordText)
@@ -50,9 +50,9 @@ class SaveViewController: UIViewController {
                 Phone: \(phoneText)
                 """
 
-            // Firebase Storage'a kaydedin (combinedText'i kullanarak yukarıdaki örnek kodu kullanabilirsiniz).
+            // Firebase Storage'a kayıt işlemleri (combinedText'i kullanarak yukarıdaki örnek kodu kullanalım).
             let storage = Storage.storage()
-            let textData = combinedText.data(using: .utf8) ?? Data() // Data türünü unwrap edin veya varsayılan bir değer kullanın
+            let textData = combinedText.data(using: .utf8) ?? Data() // Data türünü unwrap edin veya varsayılan bir değer kullanım hali
             let textRef = storage.reference().child("kullanici_metin.txt")
             
             textRef.putData(textData, metadata: nil) { (metadata, error) in
@@ -63,8 +63,8 @@ class SaveViewController: UIViewController {
                 }
             }
         } else {
-            // Eğer bir veya daha fazla metin alanı boşsa, uygun hata işlemlerini burada yapabilirsiniz.
-            print("Bir veya daha fazla metin alanı boş.")
+            // Eğer bir veya daha fazla metin alanı boşsa, uygun hata işlemlerini burada yapabiliriz.
+            print("Bir veya daha fazla metin alanı boş.") // Güvence amaçlı bir geri iletim print'i
         }
         
         if saveEmailText.text != "" && saveNameText.text != "" && savePasswordText.text != "" && saveNickText.text != "" {

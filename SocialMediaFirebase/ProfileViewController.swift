@@ -8,13 +8,24 @@
 import UIKit
 import Firebase
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController , UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    @IBOutlet var profileImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        profileImage.isUserInteractionEnabled = true
+        let imageTabRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(selectImage2))
+        profileImage.addGestureRecognizer(imageTabRecognizer2)
         
     }
-    
+    @objc func selectImage2(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(picker , animated: true)
+    }
 
 }
