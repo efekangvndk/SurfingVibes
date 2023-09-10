@@ -10,6 +10,7 @@ import Firebase
 
 class ProfileViewController: UIViewController , UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    @IBOutlet var surfingGif: UIImageView!
     @IBOutlet var profileImage: UIImageView!
     
     override func viewDidLoad() {
@@ -19,6 +20,8 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate 
         let imageTabRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(selectImage2))
         profileImage.addGestureRecognizer(imageTabRecognizer2)
         
+        let photoGif2 = UIImage.gifImageWithName("surfing gif")
+        surfingGif.image = photoGif2
     }
     @objc func selectImage2(){
         let picker = UIImagePickerController()

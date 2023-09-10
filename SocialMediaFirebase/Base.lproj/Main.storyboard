@@ -121,8 +121,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fY-Jf-GaE">
+                                <rect key="frame" x="54" y="559" width="284" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RP-G6-9cu">
-                                <rect key="frame" x="106" y="690" width="181" height="33"/>
+                                <rect key="frame" x="97" y="687" width="198" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray">
@@ -185,8 +189,8 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseForegroundColor" red="0.72392528553299496" green="0.43945058185661179" blue="0.21177459513613806" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="baseBackgroundColor" red="0.60713435913705582" green="0.4435409121229496" blue="0.27117434855162592" alpha="0.18692708333333333" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" red="0.89037308107280821" green="0.59585854697176499" blue="0.89863578680203049" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.50961574348918703" green="0.51044971446700504" blue="0.49420897318986928" alpha="0.18692708333333333" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
@@ -197,6 +201,7 @@
                     <navigationItem key="navigationItem" id="KfG-fa-K4a"/>
                     <connections>
                         <outlet property="profileImage" destination="a5Z-5X-KuV" id="Hoc-3b-a3n"/>
+                        <outlet property="surfingGif" destination="2fY-Jf-GaE" id="eVo-Me-aDt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7p-bf-COv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

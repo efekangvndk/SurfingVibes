@@ -15,6 +15,7 @@
 		BE1081092A71CF78008BBBAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1081082A71CF78008BBBAA /* Assets.xcassets */; };
 		BE10810C2A71CF78008BBBAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE10810A2A71CF78008BBBAA /* LaunchScreen.storyboard */; };
 		BE1081142A71D1BA008BBBAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE1081132A71D1BA008BBBAA /* GoogleService-Info.plist */; };
+		BE8014312AADDB120042756E /* surfing gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = BE8014302AADDB120042756E /* surfing gif.gif */; };
 		BE81C00E2A7BF5D800F0CAC4 /* SurfingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81C00D2A7BF5D800F0CAC4 /* SurfingViewController.swift */; };
 		BE81C0102A7BF5F900F0CAC4 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81C00F2A7BF5F900F0CAC4 /* UploadViewController.swift */; };
 		BE81C0122A7BF62B00F0CAC4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81C0112A7BF62B00F0CAC4 /* SettingsViewController.swift */; };
@@ -39,6 +40,7 @@
 		BE10810B2A71CF78008BBBAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE10810D2A71CF78008BBBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE1081132A71D1BA008BBBAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE8014302AADDB120042756E /* surfing gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "surfing gif.gif"; sourceTree = "<group>"; };
 		BE81C00D2A7BF5D800F0CAC4 /* SurfingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfingViewController.swift; sourceTree = "<group>"; };
 		BE81C00F2A7BF5F900F0CAC4 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		BE81C0112A7BF62B00F0CAC4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				BE10810A2A71CF78008BBBAA /* LaunchScreen.storyboard */,
 				BE1081132A71D1BA008BBBAA /* GoogleService-Info.plist */,
 				BE10810D2A71CF78008BBBAA /* Info.plist */,
+				BE8014302AADDB120042756E /* surfing gif.gif */,
 				BED8241F2A7F202600248767 /* surfingVibes.gif */,
 				BEAF588F2A7C2AF8006C8D37 /* smileGif.gif */,
 				BE9422F12A8286A9001925B0 /* photo.gif */,
@@ -188,6 +191,7 @@
 				BED824202A7F202600248767 /* surfingVibes.gif in Resources */,
 				BE1081092A71CF78008BBBAA /* Assets.xcassets in Resources */,
 				BE1081072A71CF77008BBBAA /* Main.storyboard in Resources */,
+				BE8014312AADDB120042756E /* surfing gif.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
