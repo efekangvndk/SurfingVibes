@@ -20,6 +20,7 @@
 		BE81C0102A7BF5F900F0CAC4 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81C00F2A7BF5F900F0CAC4 /* UploadViewController.swift */; };
 		BE81C0122A7BF62B00F0CAC4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81C0112A7BF62B00F0CAC4 /* SettingsViewController.swift */; };
 		BE81C0142A7BFC4200F0CAC4 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81C0132A7BFC4200F0CAC4 /* SaveViewController.swift */; };
+		BE8A3D2A2AAE8AA9005900B1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8A3D292AAE8AA9005900B1 /* TableViewCell.swift */; };
 		BE9422F22A8286A9001925B0 /* photo.gif in Resources */ = {isa = PBXBuildFile; fileRef = BE9422F12A8286A9001925B0 /* photo.gif */; };
 		BE9422F42A831480001925B0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9422F32A831480001925B0 /* ProfileViewController.swift */; };
 		BEAF58902A7C2AF8006C8D37 /* smileGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEAF588F2A7C2AF8006C8D37 /* smileGif.gif */; };
@@ -45,6 +46,7 @@
 		BE81C00F2A7BF5F900F0CAC4 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		BE81C0112A7BF62B00F0CAC4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BE81C0132A7BFC4200F0CAC4 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
+		BE8A3D292AAE8AA9005900B1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BE9422F12A8286A9001925B0 /* photo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = photo.gif; sourceTree = "<group>"; };
 		BE9422F32A831480001925B0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BEAF588F2A7C2AF8006C8D37 /* smileGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = smileGif.gif; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				BE1081012A71CF77008BBBAA /* SceneDelegate.swift */,
 				BE1081082A71CF78008BBBAA /* Assets.xcassets */,
 				BE81C0112A7BF62B00F0CAC4 /* SettingsViewController.swift */,
+				BE8A3D292AAE8AA9005900B1 /* TableViewCell.swift */,
 				BE81C0132A7BFC4200F0CAC4 /* SaveViewController.swift */,
 				BE9422F32A831480001925B0 /* ProfileViewController.swift */,
 				BE81C00F2A7BF5F900F0CAC4 /* UploadViewController.swift */,
@@ -249,6 +252,7 @@
 				BE81C0102A7BF5F900F0CAC4 /* UploadViewController.swift in Sources */,
 				BE81C0122A7BF62B00F0CAC4 /* SettingsViewController.swift in Sources */,
 				BE81C00E2A7BF5D800F0CAC4 /* SurfingViewController.swift in Sources */,
+				BE8A3D2A2AAE8AA9005900B1 /* TableViewCell.swift in Sources */,
 				BE1081002A71CF77008BBBAA /* AppDelegate.swift in Sources */,
 				BE9422F42A831480001925B0 /* ProfileViewController.swift in Sources */,
 				BE1081022A71CF77008BBBAA /* SceneDelegate.swift in Sources */,

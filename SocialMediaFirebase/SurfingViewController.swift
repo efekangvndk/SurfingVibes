@@ -9,6 +9,7 @@ import UIKit
 
 class SurfingViewController: UIViewController {
 
+    @IBOutlet var tabView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
