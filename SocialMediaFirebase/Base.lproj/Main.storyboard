@@ -203,6 +203,7 @@
                     <tabBarItem key="tabBarItem" title="My Profile" image="person" catalog="system" id="t9J-Yr-9oP"/>
                     <navigationItem key="navigationItem" id="KfG-fa-K4a"/>
                     <connections>
+                        <outlet property="bioCommentText" destination="Vr5-H4-LPJ" id="7Iw-Rq-PUV"/>
                         <outlet property="profileImage" destination="a5Z-5X-KuV" id="Hoc-3b-a3n"/>
                         <outlet property="surfingGif" destination="2fY-Jf-GaE" id="eVo-Me-aDt"/>
                     </connections>

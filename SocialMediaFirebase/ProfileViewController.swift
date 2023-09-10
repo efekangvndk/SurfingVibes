@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate 
 
     @IBOutlet var surfingGif: UIImageView!
     @IBOutlet var profileImage: UIImageView!
+    @IBOutlet var bioCommentText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +34,25 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate 
     @IBAction func saveButton(_ sender: Any) {
         // Burda da profile imagemizi kayıt etmek için tekrar auth kullanarak storage kayıt ediıyoruz.
         
+        let commentText = bioCommentText.text ?? ""
+        
         let storage = Storage.storage()
         let storageReference2 = storage.reference()
+    
+        let ProfileFolderMedia = storageReference2.child("profile picture")
         
-        let ProfileFolderMedia = storageReference2.child("profile paper")
+        if let commentData = commentText.data(using: .utf8){
+            let profileImageRef = ProfileFolderMedia.child("profile jpeg").child("profile comment")
+            profileImageRef.putData(commentData) { metadata, error in
+                if let error = error {
+                    // Hata durumunda işlemleri burada işlemleri
+                    print("Hata: \(error.localizedDescription)")
+                    } else {
+                    // Yükleme başarılı olduğunda işlemleri burada yapılabilir
+                    print("Comment metni başarıyla kaydedildi!")
+                }
+            }
+        }
         
         if let data = profileImage.image?.jpegData(compressionQuality: 0.5){
             
