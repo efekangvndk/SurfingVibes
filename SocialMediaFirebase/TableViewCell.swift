@@ -1,11 +1,12 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell{
 
     @IBOutlet var userNameText: UILabel!
     @IBOutlet var likeLabel: UILabel!
     @IBOutlet var comentLabel: UILabel!
+    @IBOutlet var disLikeLabel: UILabel!
     @IBOutlet var userUploadImageView: UIImageView!
     @IBOutlet var userImageView: UIImageView!
     override func awakeFromNib() {
@@ -18,6 +19,8 @@ class TableViewCell: UITableViewCell {
 
     }
 
+    @IBAction func disLikeButton(_ sender: Any) {
+    }
     @IBAction func likeButton(_ sender: Any) {
     }
 }
