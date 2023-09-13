@@ -3,15 +3,23 @@ import Firebase
 
 class SurfingViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
+    var userEmailArray = [String]()
+    var userCommentArray = [String]()
+    var likeArray = [Int]()
+    var disLikeArray = [Int]()
+    var userımageArray = [String]()
     
+    
+    var textFromFirstScreen: String?
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
         
-        getDataFromFirestore()
+        tableView.delegate = self   //burda aşşaığda oluşturduğumuz temsilcileri ve kaynak kodu
+        tableView.dataSource = self //Super viewdidLoad içinde uygulama açıldığında bir kez olmak üzere çalıştırmak için çağırıyoruz.
+        
+        getDataFromFirestore()      //Aynı şekilde getData fonksiyonumuzuda.
     }
     
     func getDataFromFirestore() {
@@ -21,31 +29,46 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
                 print(error?.localizedDescription)
             }else {
                 if snapshot?.isEmpty != true && snapshot != nil {
-                    for document in  snapshot!.documents{
-                        let documentID = document.documentID
+                    for document in  snapshot!.documents{     // Alandaki işlemler uploadladığımız görseli kimin ve hangi görsel olduğunu-
+                        let documentID = document.documentID  // Gösterip veriyi çekmek ve kullanıcıya surfing ekranında göstermek.
                         if let postedBy = document.get("PostedBy") as? String{
-                            print(documentID)
-
+                            self.userEmailArray.append(postedBy)
                         }
-                        
+                        if let postredComment = document.get("PostComment") as? String{
+                            self.userCommentArray.append(postredComment)
+                        }
+                        if let likes = document.get("likes") as? Int{
+                            self.likeArray.append(likes)
+                        }
+                        if let dislikes = document.get("dislikes") as? Int{
+                            self.disLikeArray.append(dislikes)
+                        }
+                        if let imageUrl = document.get("imageUrl") as? String{
+                            self.userımageArray.append(imageUrl)
+                        }
                     }
+                    self.tableView.reloadData()
                 }
             }
         }
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return userEmailArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell" , for: indexPath) as! TableViewCell
-        cell.userNameText.text = "User"
-        cell.comentLabel.text = "Test"
-        cell.likeLabel.text = "0"
-        cell.disLikeLabel.text = "0"
-        cell.userImageView.image = UIImage(named: "person.png")
-        cell.userUploadImageView.image = UIImage(named: "person.png")
+        if let text = textFromFirstScreen {
+            cell.userNameText.text = userEmailArray[indexPath.row]
+            cell.comentLabel.text = userCommentArray[indexPath.row]    // Bu alandaki işlemlerimiz ekrandaki değerlerin ilk gösterimleri
+            cell.likeLabel.text = String(likeArray[indexPath.row])
+            cell.disLikeLabel.text = String(disLikeArray[indexPath.row])
+            cell.userImageView.image = UIImage(named: "person.png")
+            cell.userUploadImageView.image = UIImage(named: "person.png")
+        }
         return cell
+        
     }
   
 
