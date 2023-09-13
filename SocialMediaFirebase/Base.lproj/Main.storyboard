@@ -101,40 +101,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person_png-removebg-preview(1)" translatesAutoresizingMaskIntoConstraints="NO" id="a5Z-5X-KuV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.png" translatesAutoresizingMaskIntoConstraints="NO" id="a5Z-5X-KuV">
                                 <rect key="frame" x="16" y="113" width="106" height="83"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="QcU-XK-aLl"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Surf Board :" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr5-H4-LPJ">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Surf Board :" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr5-H4-LPJ">
                                 <rect key="frame" x="16" y="199" width="271" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="Je8-Yh-eJ6"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=compact-widthClass=compact">
                                     <nil key="background"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwg-WM-ekO">
-                                <rect key="frame" x="135" y="63" width="122" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwg-WM-ekO">
+                                <rect key="frame" x="135" y="41" width="122" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fY-Jf-GaE">
-                                <rect key="frame" x="54" y="559" width="284" height="183"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="kJ8-fq-kf6"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="VbG-EP-SL0">
+                                <rect key="frame" x="46" y="276" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RP-G6-9cu">
-                                <rect key="frame" x="97" y="687" width="198" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="t2I-LZ-Fw6"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="D6b-r6-p1f">
+                                <rect key="frame" x="149" y="276" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="BJy-T3-wsq">
+                                <rect key="frame" x="252" y="276" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="hHM-9T-avt">
+                                <rect key="frame" x="46" y="383" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="iFm-O6-BuO">
+                                <rect key="frame" x="149" y="383" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="Qf2-hf-4vQ">
+                                <rect key="frame" x="252" y="383" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="lHz-vi-O9P">
+                                <rect key="frame" x="46" y="490" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="Pmw-iJ-VPM">
+                                <rect key="frame" x="149" y="490" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo kopyası-depositphotos-bgremover" translatesAutoresizingMaskIntoConstraints="NO" id="CeW-pn-6cG">
+                                <rect key="frame" x="252" y="490" width="95" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fY-Jf-GaE">
+                                <rect key="frame" x="46" y="580" width="301" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RP-G6-9cu">
+                                <rect key="frame" x="97" y="709" width="198" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray">
                                     <attributedString key="attributedTitle">
@@ -203,26 +232,23 @@
                                     <action selector="saveButton:" destination="mbj-wd-vKb" eventType="touchUpInside" id="jw9-lK-vWB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmZ-YM-S6S">
+                                <rect key="frame" x="77" y="125" width="180" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User info " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8w-gF-AKT">
+                                <rect key="frame" x="91" y="156" width="152" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZQx-G3-WIp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="a5Z-5X-KuV" firstAttribute="leading" secondItem="VgZ-sC-zS8" secondAttribute="leadingMargin" id="1fw-3q-asj"/>
-                            <constraint firstItem="ZQx-G3-WIp" firstAttribute="bottom" secondItem="2fY-Jf-GaE" secondAttribute="bottom" constant="100" id="8na-6f-gBz"/>
-                            <constraint firstItem="ZQx-G3-WIp" firstAttribute="bottom" secondItem="4RP-G6-9cu" secondAttribute="bottom" constant="122" id="BHF-pw-QT8"/>
-                            <constraint firstItem="2fY-Jf-GaE" firstAttribute="leading" secondItem="ZQx-G3-WIp" secondAttribute="leading" constant="54" id="BlJ-em-9TS"/>
-                            <constraint firstItem="zwg-WM-ekO" firstAttribute="top" secondItem="ZQx-G3-WIp" secondAttribute="top" constant="63" id="MN2-Bm-x9d"/>
-                            <constraint firstItem="4RP-G6-9cu" firstAttribute="leading" secondItem="ZQx-G3-WIp" secondAttribute="leading" constant="97" id="QVg-PI-mWQ"/>
-                            <constraint firstItem="a5Z-5X-KuV" firstAttribute="leading" secondItem="Vr5-H4-LPJ" secondAttribute="leading" id="YuM-HV-afB"/>
-                            <constraint firstItem="zwg-WM-ekO" firstAttribute="centerX" secondItem="4RP-G6-9cu" secondAttribute="centerX" id="cZK-Z1-04I"/>
-                            <constraint firstItem="ZQx-G3-WIp" firstAttribute="trailing" secondItem="a5Z-5X-KuV" secondAttribute="trailing" constant="271" id="cxW-wM-w7u"/>
-                            <constraint firstItem="zwg-WM-ekO" firstAttribute="centerX" secondItem="VgZ-sC-zS8" secondAttribute="centerX" id="exM-0i-URO"/>
-                            <constraint firstItem="a5Z-5X-KuV" firstAttribute="top" secondItem="ZQx-G3-WIp" secondAttribute="top" constant="113" id="kOh-W5-e2P"/>
-                            <constraint firstItem="Vr5-H4-LPJ" firstAttribute="top" secondItem="a5Z-5X-KuV" secondAttribute="bottom" constant="3" id="uBf-qn-FY8"/>
-                            <constraint firstItem="zwg-WM-ekO" firstAttribute="leading" secondItem="ZQx-G3-WIp" secondAttribute="leading" constant="135" id="w74-3d-fS0"/>
-                            <constraint firstItem="2fY-Jf-GaE" firstAttribute="centerX" secondItem="4RP-G6-9cu" secondAttribute="centerX" id="wvb-1R-8uO"/>
-                            <constraint firstItem="ZQx-G3-WIp" firstAttribute="trailing" secondItem="Vr5-H4-LPJ" secondAttribute="trailing" constant="106" id="y9P-qv-yVk"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Profile" image="person" catalog="system" id="t9J-Yr-9oP"/>
                     <navigationItem key="navigationItem" id="KfG-fa-K4a"/>
@@ -609,7 +635,9 @@
         <image name="figure.surfing" catalog="system" width="128" height="119"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="leave traces" width="3684" height="7986"/>
+        <image name="logo kopyası-depositphotos-bgremover" width="1200" height="1200"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.png" width="487" height="512"/>
         <image name="person_png-removebg-preview(1)" width="487" height="512"/>
         <image name="polaroid2" width="3684" height="7986"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
