@@ -29,6 +29,14 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
                 print(error?.localizedDescription)
             }else {
                 if snapshot?.isEmpty != true && snapshot != nil {
+                    
+                    self.userımageArray.removeAll(keepingCapacity: false)
+                    self.userEmailArray.removeAll(keepingCapacity: false)
+                    self.userCommentArray.removeAll(keepingCapacity: false)
+                    self.likeArray.removeAll(keepingCapacity: false)
+                    self.disLikeArray.removeAll(keepingCapacity: false)
+                    
+                    
                     for document in  snapshot!.documents{     // Alandaki işlemler uploadladığımız görseli kimin ve hangi görsel olduğunu-
                         let documentID = document.documentID  // Gösterip veriyi çekmek ve kullanıcıya surfing ekranında göstermek.
                         if let postedBy = document.get("PostedBy") as? String{
@@ -40,7 +48,7 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
                         if let likes = document.get("likes") as? Int{
                             self.likeArray.append(likes)
                         }
-                        if let dislikes = document.get("dislikes") as? Int{
+                        if let dislikes = document.get("dislike") as? Int{
                             self.disLikeArray.append(dislikes)
                         }
                         if let imageUrl = document.get("imageUrl") as? String{
@@ -62,6 +70,7 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
             cell.userNameText.text = userEmailArray[indexPath.row]
             cell.comentLabel.text = userCommentArray[indexPath.row]    // Bu alandaki işlemlerimiz ekrandaki değerlerin ilk gösterimleri
             cell.likeLabel.text = String(likeArray[indexPath.row])
+            cell.disLikeLabel.text = String(disLikeArray[indexPath.row])
             cell.userImageView.image = UIImage(named: "person.png")
             cell.userUploadImageView.sd_setImage(with: URL(string: self.userımageArray[indexPath.row]))
         return cell
