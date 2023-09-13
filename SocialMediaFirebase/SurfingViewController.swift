@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import SDWebImage
 
 class SurfingViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
@@ -10,7 +11,6 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
     var userımageArray = [String]()
     
     
-    var textFromFirstScreen: String?
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,14 +59,11 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell" , for: indexPath) as! TableViewCell
-        if let text = textFromFirstScreen {
             cell.userNameText.text = userEmailArray[indexPath.row]
             cell.comentLabel.text = userCommentArray[indexPath.row]    // Bu alandaki işlemlerimiz ekrandaki değerlerin ilk gösterimleri
             cell.likeLabel.text = String(likeArray[indexPath.row])
-            cell.disLikeLabel.text = String(disLikeArray[indexPath.row])
             cell.userImageView.image = UIImage(named: "person.png")
-            cell.userUploadImageView.image = UIImage(named: "person.png")
-        }
+            cell.userUploadImageView.sd_setImage(with: URL(string: self.userımageArray[indexPath.row]))
         return cell
         
     }

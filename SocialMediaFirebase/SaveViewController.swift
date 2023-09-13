@@ -92,11 +92,5 @@ class SaveViewController: UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true )
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toSurfingViewController" { // Segue kimliğinizi doğru kontrol edin
-            if let destinationViewController = segue.destination as? SurfingViewController {
-                destinationViewController.textFromFirstScreen = saveEmailText.text // Örnek olarak saveEmailText'i kullanabilirsiniz
-            }
-        }
-    }
+   
 }

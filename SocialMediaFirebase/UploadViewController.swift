@@ -57,7 +57,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
         let mediaFolder = storageReference.child("media")
         
         //bu veriyi kayıt etmek için bunu bir data şeklinde yazdırmamız lazım bunu da aşşağıdaki şekilde yapyıoruz.
-        if let data = gallery.image?.jpegData(compressionQuality: 0.5){
+        if let data = toLibrary.image?.jpegData(compressionQuality: 0.5){
             ///Burda upload ladığımız her bir birim için farkı bir url işlemi yaptırmamız lazım ki upload dan sonra birimler değişmesin kalsın.
             ///Bunu da UUID işlemi ile yapıcaz.
             let uuid = UUID().uuidString // her kullanımdan sonra unik bir uydurma kullanıcaz
