@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class SurfingViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
@@ -9,7 +10,30 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        getDataFromFirestore()
     }
+    
+    func getDataFromFirestore() {
+        let fireStoreDatabase = Firestore.firestore()
+        fireStoreDatabase.collection("Posts").addSnapshotListener { snapshot, error in
+            if error != nil {
+                print(error?.localizedDescription)
+            }else {
+                if snapshot?.isEmpty != true && snapshot != nil {
+                    for document in  snapshot!.documents{
+                        let documentID = document.documentID
+                        if let postedBy = document.get("PostedBy") as? String{
+                            print(documentID)
+
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
