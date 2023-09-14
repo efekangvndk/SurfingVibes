@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Download_premium_png_of_Blue_swirly_abstract_line_design_element__by_Busbus_about_blue_line__shape_png__abstract_design__abstract_lines__and_blue_swirl_2282609-removebg-preview.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

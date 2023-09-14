@@ -76,6 +76,5 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
         return cell
         
     }
-  
-
+    
 }
