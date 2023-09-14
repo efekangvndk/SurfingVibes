@@ -16,7 +16,15 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundImage = UIImageView(image: UIImage(named: "background"))
+        
+        backgroundImage.alpha = 0.2
+        backgroundImage.frame = view.bounds
+        view.addSubview(backgroundImage)
+        view.insertSubview(backgroundImage, at: 0)
 
+        
         profileImage.isUserInteractionEnabled = true
         let imageTabRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(selectImage2))
         profileImage.addGestureRecognizer(imageTabRecognizer2)
@@ -33,6 +41,15 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate 
     }
     @IBAction func saveButton(_ sender: Any) {
         // Burda da profile imagemizi kayıt etmek için tekrar auth kullanarak storage kayıt ediıyoruz.
+        
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "profiletosurf" {
+                if let SurfingViewController = segue.destination as? TableViewCell {
+                    // Görüntüyü ikinci ekrana iletebilirsiniz
+                    SurfingViewController.imageToSend = profileImage.image
+                }
+            }
+        }
         
         let commentText = bioCommentText.text ?? ""
         

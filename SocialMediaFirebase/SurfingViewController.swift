@@ -4,6 +4,7 @@ import SDWebImage
 
 class SurfingViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
+    
     var userEmailArray = [String]()
     var userCommentArray = [String]()
     var likeArray = [Int]()

@@ -3,6 +3,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell{
 
+    var imageToSend: UIImage?
     @IBOutlet var userNameText: UILabel!
     @IBOutlet var likeLabel: UILabel!
     @IBOutlet var comentLabel: UILabel!
@@ -11,6 +12,9 @@ class TableViewCell: UITableViewCell{
     @IBOutlet var userImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        if let receivedImage = imageToSend {
+                userImageView.image = receivedImage // UIImageView'a gönderilen görüntüyü atayabilirsiniz
+            }
         
     }
 

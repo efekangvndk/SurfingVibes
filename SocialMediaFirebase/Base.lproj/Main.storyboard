@@ -145,7 +145,7 @@
             <objects>
                 <viewController id="mbj-wd-vKb" customClass="ProfileViewController" customModule="SocialMediaFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VgZ-sC-zS8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-lT-c7e">
@@ -196,10 +196,6 @@
                                 <rect key="frame" x="173" y="439" width="150" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="f3097dc4-5d7b-4d7d-a126-ef321513ef84" translatesAutoresizingMaskIntoConstraints="NO" id="iky-ER-yuv">
-                                <rect key="frame" x="14" y="96" width="111" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="uEg-5W-ctj">
                                 <rect key="frame" x="26" y="421" width="150" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -207,6 +203,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.png" translatesAutoresizingMaskIntoConstraints="NO" id="a5Z-5X-KuV">
                                 <rect key="frame" x="37" y="118" width="65" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Surf Board :" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr5-H4-LPJ">
                                 <rect key="frame" x="15" y="220" width="271" height="34"/>
@@ -349,6 +350,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="f3097dc4-5d7b-4d7d-a126-ef321513ef84" translatesAutoresizingMaskIntoConstraints="NO" id="iky-ER-yuv">
+                                <rect key="frame" x="15" y="102" width="109" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZQx-G3-WIp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -359,6 +364,7 @@
                         <outlet property="bioCommentText" destination="Vr5-H4-LPJ" id="7Iw-Rq-PUV"/>
                         <outlet property="profileImage" destination="a5Z-5X-KuV" id="Hoc-3b-a3n"/>
                         <outlet property="surfingGif" destination="2fY-Jf-GaE" id="eVo-Me-aDt"/>
+                        <segue destination="bkt-3f-zLF" kind="show" identifier="profiletosurf" id="kLU-27-vTz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7p-bf-COv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -370,11 +376,11 @@
             <objects>
                 <viewController id="bkt-3f-zLF" customClass="SurfingViewController" customModule="SocialMediaFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oTO-38-Yv3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RgH-vw-Y8k">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="498" id="1ub-Xl-0AW" customClass="TableViewCell" customModule="SocialMediaFirebase" customModuleProvider="target">
@@ -497,6 +503,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Surfing" image="figure.surfing" catalog="system" id="KOD-b9-Uqz"/>
+                    <navigationItem key="navigationItem" id="atj-Gq-Di7"/>
                     <connections>
                         <outlet property="tableView" destination="RgH-vw-Y8k" id="5Cr-fz-8eH"/>
                     </connections>
@@ -908,8 +915,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="p98-hs-kyp"/>
-        <segue reference="L1H-bS-ZVc"/>
-        <segue reference="Cnz-DX-bB5"/>
+        <segue reference="lnO-5w-Hsd"/>
+        <segue reference="kLU-27-vTz"/>
+        <segue reference="eZD-vA-K1Z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Ekran Resmi 2023-09-14 23.44.00" width="784" height="516"/>
