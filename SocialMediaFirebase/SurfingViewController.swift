@@ -10,6 +10,7 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
     var likeArray = [Int]()
     var disLikeArray = [Int]()
     var userımageArray = [String]()
+    var documentIDArray = [String]()
     
     
     @IBOutlet var tableView: UITableView!
@@ -25,7 +26,7 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
     
     func getDataFromFirestore() {
         let fireStoreDatabase = Firestore.firestore()
-        fireStoreDatabase.collection("Posts").addSnapshotListener { snapshot, error in
+        fireStoreDatabase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { snapshot, error in
             if error != nil {
                 print(error?.localizedDescription)
             }else {
@@ -36,10 +37,13 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
                     self.userCommentArray.removeAll(keepingCapacity: false)
                     self.likeArray.removeAll(keepingCapacity: false)
                     self.disLikeArray.removeAll(keepingCapacity: false)
+                    self.documentIDArray.removeAll(keepingCapacity: false)
                     
                     
                     for document in  snapshot!.documents{     // Alandaki işlemler uploadladığımız görseli kimin ve hangi görsel olduğunu-
                         let documentID = document.documentID  // Gösterip veriyi çekmek ve kullanıcıya surfing ekranında göstermek.
+                        self.documentIDArray.append(documentID)
+                        
                         if let postedBy = document.get("PostedBy") as? String{
                             self.userEmailArray.append(postedBy)
                         }

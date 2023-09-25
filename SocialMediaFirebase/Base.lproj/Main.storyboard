@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="c7y-yB-k2O" customClass="UploadViewController" customModule="SocialMediaFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FoT-7h-RWe">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="see3" translatesAutoresizingMaskIntoConstraints="NO" id="z3z-Jc-KYW">
@@ -32,7 +32,6 @@
                                 <rect key="frame" x="57" y="460" width="279" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87058818339999999" green="0.92941176889999999" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -55,7 +54,6 @@
                                 <rect key="frame" x="57" y="502" width="279" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87058818339999999" green="0.92941176889999999" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -85,7 +83,7 @@
                                             <attributes>
                                                 <color key="NSBackgroundColor" red="0.96797668147208127" green="0.7938465235721035" blue="0.40225869478669962" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="NSColor" red="1" green="0.24069927750792666" blue="0.23202637434340756" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
                                                 <font key="NSOriginalFont" size="18" name="AppleBraille-Pinpoint6Dot"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -102,7 +100,7 @@
                                             <attributes>
                                                 <color key="NSBackgroundColor" red="0.96797668147208127" green="0.7938465235721035" blue="0.40225869478669962" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="NSColor" red="1" green="0.24069927750792666" blue="0.23202637434340756" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
                                                 <font key="NSOriginalFont" size="18" name="AppleBraille-Pinpoint6Dot"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -128,6 +126,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up" catalog="system" id="lOx-uo-aHc"/>
+                    <navigationItem key="navigationItem" id="AqM-m2-eqm"/>
                     <connections>
                         <outlet property="commentText" destination="Tlw-Sl-K3a" id="xYV-gp-b9R"/>
                         <outlet property="gallery" destination="o4D-2W-YoP" id="Pzn-jb-nYX"/>
@@ -145,7 +144,7 @@
             <objects>
                 <viewController id="mbj-wd-vKb" customClass="ProfileViewController" customModule="SocialMediaFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VgZ-sC-zS8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-lT-c7e">
@@ -726,8 +725,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logauotBoutton:" destination="b4g-uL-cRL" eventType="touchUpInside" id="2NH-Hd-nd7"/>
-                                    <segue destination="mbj-wd-vKb" kind="show" identifier="settingToProfile" id="Cnz-DX-bB5"/>
+                                    <segue destination="mbj-wd-vKb" kind="show" id="sjd-2O-4kj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-Ff-tLl">
@@ -749,7 +747,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logauotBoutton:" destination="b4g-uL-cRL" eventType="touchUpInside" id="YVN-ap-jlZ"/>
+                                    <segue destination="c7y-yB-k2O" kind="show" id="FgV-JJ-Kde"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBK-Vn-GgG">
@@ -771,7 +769,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logauotBoutton:" destination="b4g-uL-cRL" eventType="touchUpInside" id="sNH-40-BtM"/>
+                                    <segue destination="bkt-3f-zLF" kind="show" id="4Yj-dO-k3b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKx-rb-imR">
@@ -916,8 +914,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="p98-hs-kyp"/>
         <segue reference="lnO-5w-Hsd"/>
-        <segue reference="kLU-27-vTz"/>
-        <segue reference="eZD-vA-K1Z"/>
+        <segue reference="4Yj-dO-k3b"/>
+        <segue reference="sjd-2O-4kj"/>
+        <segue reference="FgV-JJ-Kde"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Ekran Resmi 2023-09-14 23.44.00" width="784" height="516"/>
