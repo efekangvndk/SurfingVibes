@@ -78,6 +78,7 @@ class SurfingViewController: UIViewController , UITableViewDelegate, UITableView
             cell.disLikeLabel.text = String(disLikeArray[indexPath.row])
             cell.userImageView.image = UIImage(named: "person.png")
             cell.userUploadImageView.sd_setImage(with: URL(string: self.userımageArray[indexPath.row]))
+            cell.documentIDLabel.text = documentIDArray[indexPath.row]
         return cell
         
     }
