@@ -86,6 +86,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
                                     
                                     self.toLibrary.image = UIImage(named: "select.png")
                                     self.commentText.text = ""
+                                    self.nameText.text = ""
                                     self.tabBarController?.selectedIndex = 0
                                 }
                                 })
